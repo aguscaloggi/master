@@ -1,0 +1,1104 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-color: rgba(245, 245, 245, 0.87);
+  --bg-color: #121212;
+  --bt-color: rgba(55, 139, 252, 0.2);
+  --box-shadow: 6px 6px 12px #070707,
+    -6px -6px 12px #1d1d1d;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #333;
+  background-color: var(--bg-color);
+  min-height: 100vh;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 8px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(122, 122, 122);
+  border-radius: 10px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
+/* index.html */
+
+.header {
+  height: fit-content;
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  word-wrap: normal;
+  color: #fff;
+}
+
+.header__frase {
+  display: inline-block;
+  font-family: 'Square Peg', cursive;
+  color: var(--font-color);
+  font-size: 32px;
+  margin-left: 0.5rem;
+  padding-bottom: 6px;
+  white-space: nowrap;
+}
+
+.nav__lista {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-right: 1rem;
+  list-style: none;
+}
+
+li a {
+  color: var(--font-color);
+}
+
+li a:hover {
+  color: rgb(255, 255, 255);
+  transition-duration: 200ms;
+}
+
+.hero {
+  display: flex;
+}
+
+.hero__img {
+  margin: 0;
+  width: 100%;
+  object-fit: cover;
+}
+
+.hero__texto {
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  text-align: justify;
+  border-radius: 0.5em;
+  padding: 1em;
+  margin: 5px 1rem;
+  box-shadow: var(--box-shadow);
+}
+
+.grid__card {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  justify-content: space-evenly;
+  align-content: space-evenly;
+  row-gap: 15px;
+  margin: 0.5rem 0 1rem 0;
+}
+
+.card__destacada {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-color);
+  color: rgba(245, 245, 245, 0.60);
+  border-radius: 10px;
+  width: 400px;
+  height: 370px;
+  padding: 16px;
+  margin-top: 3vh;
+  box-shadow: var(--box-shadow);
+}
+
+.card__destacada:hover {
+  color: rgba(245, 245, 245, 0.87);
+  transition: 500ms;
+}
+
+.card__destacada:hover img {
+  transform: scale(1.03);
+  transition: 500ms;
+}
+
+.card__title {
+  color: var(--font-color);
+}
+
+.bottom__footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+  padding-bottom: 6px;
+  background-color: var(--bg-color);
+  margin-top: auto;
+}
+
+.footer__p {
+  margin-right: 1rem;
+  color: white;
+}
+
+.footer__frase {
+  display: flex;
+  font-family: 'Square Peg', cursive;
+  color: var(--font-color);
+  font-size: 32px;
+  margin-left: 0.5rem;
+}
+
+.tituloPregunta {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.titulo__pregunta {
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/* alojamientos.html */
+
+select {
+  /* for Firefox */
+  -moz-appearance: none;
+  /* for Chrome */
+  -webkit-appearance: none;
+}
+
+
+.filters {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: 1rem;
+  gap: 2rem;
+}
+
+.filters__select {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  padding: 0.5em;
+  margin: 5px 0;
+  border-radius: 5px;
+  box-shadow: var(--box-shadow);
+}
+
+.filters__label__select {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.filters__provincia {
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  font-size: 16px;
+  outline: 0;
+  border: 0;
+  border-bottom: 1px solid var(--font-color);
+  padding: 2px;
+  margin: 0 6px;
+}
+
+.filters__ciudad {
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  font-size: 16px;
+  outline: 0;
+  border: 0;
+  border-bottom: 1px solid var(--font-color);
+  padding: 2px;
+  margin-left: 6px;
+}
+
+.filters__button {
+  background-color: var(--bt-color);
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  color: var(--font-color);
+  padding: 0.4em 0.8em;
+  margin: 0.5em;
+  border: 0px;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+
+.filters__button:hover {
+  background-color: rgba(55, 139, 252, 0.3);
+  color: rgba(245, 245, 245, 1);
+  transition-duration: 200ms;
+}
+
+.filters__consultamultiple {
+  background-color: var(--bg-color);
+  color: rgba(245, 245, 245, 0.87);
+  border-radius: 5px;
+  padding: 8px;
+  margin-top: 5px;
+  box-shadow: var(--box-shadow);
+  height: fit-content;
+}
+
+.consultamultiple h1 {
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.grid__alojamientos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  justify-content: space-evenly;
+  align-content: space-evenly;
+  row-gap: 15px;
+  margin: 0.5rem 0 1rem 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 0 0.5rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-color);
+  color: rgba(245, 245, 245, 0.60);
+  border-radius: 10px;
+  width: 400px;
+  height: 370px;
+  padding: 16px;
+  margin: 0.5rem 0;
+  box-shadow: var(--box-shadow);
+}
+
+.card:hover {
+  color: rgba(245, 245, 245, 0.87);
+}
+
+.card:hover .card__img {
+  transform: scale(1.03);
+  transition: 500ms;
+}
+
+.card__title {
+  font-size: 18px;
+  margin: 0 0 2px 0;
+}
+
+.card__img {
+  align-self: center;
+  width: 100%;
+  max-width: 360px;
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.card__ul__text {
+  text-align: justify;
+  padding-right: 8px;
+}
+
+.card__ul li {
+  list-style-type: none;
+}
+
+/* alojamientox.html */
+
+.alojamientox__main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 1.5rem 0;
+}
+
+.alojamientox__container {
+  background-color: var(--bg-color);
+  border-radius: 5px;
+  box-shadow: var(--box-shadow);
+  padding: 10px;
+  height: fit-content;
+  width: fit-content;
+}
+
+.alojamientox__title {
+  color: var(--font-color);
+  font-weight: 600;
+  font-size: 22px;
+  margin: 0 0 2px 0;
+}
+
+.alojamientox__img {
+  width: 54vw;
+}
+
+.alojamientox__aside {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.alojamientox__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+  height: fit-content;
+  box-shadow: var(--box-shadow);
+}
+
+.servicios__contacto {
+  display: flex;
+  flex-direction: column;
+}
+
+.alojamientox__info ul {
+  list-style: none;
+}
+
+.alojamientox__descripcion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: justify;
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  border-radius: 5px;
+  padding: 10px;
+  width: 40vw;
+  height: fit-content;
+  box-shadow: var(--box-shadow);
+}
+
+.alojamientox__contacto {
+  margin: 0 0 1rem 0.5rem;
+}
+
+.ul__container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.alojamientox__servicios ul {
+  display: inline-block;
+}
+
+.alojamientox__contacto i {
+  color: var(--font-color);
+  font-size: 32px;
+}
+
+.alojamientox__contacto i:hover {
+  color: rgb(255, 255, 255);
+  font-size: 32px;
+}
+
+.alojamientox__contacto ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.flex__container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 1.5rem 0 1rem 0;
+}
+
+.alojamientox__form {
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  border-radius: 5px;
+  padding: 8px;
+  margin: 5px;
+  box-shadow: var(--box-shadow);
+}
+
+.alojamientox__labelinput {
+  display: flex;
+  flex-direction: row;
+  margin: 0.4em;
+}
+
+.alojamientox__input {
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  font-size: 16px;
+  border: 0;
+  border-bottom: 1.5px solid var(--font-color);
+  outline: 0;
+  padding: 4px;
+}
+
+.alojamientox__textarea {
+  background-color: var(--bg-color);
+  height: 150px;
+  padding: 12px 20px;
+  margin: 12px;
+  box-sizing: border-box;
+  border: 0;
+  border-bottom: 2px solid var(--font-color);
+  border-top: 0;
+  resize: none;
+  outline: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 17px;
+  color: var(--font-color);
+}
+
+.flex__buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.alojamientox__button {
+  background-color: var(--bt-color);
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  color: var(--font-color);
+  margin: 0.3em;
+  padding: 0.4em 0.8em;
+  border: 0px;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+
+.alojamientox__button:hover {
+  background-color: rgba(55, 139, 252, 0.3);
+  color: rgba(245, 245, 245, 1);
+  transition-duration: 200ms;
+}
+
+.alojamientox__maps {
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  border-radius: 5px;
+  padding: 5px;
+  margin: 2rem 5px 5px 5px;
+  box-shadow: var(--box-shadow);
+}
+
+.iframe__container {
+  display: flex;
+  align-content: center;
+}
+
+.iframe__container iframe {
+  padding: 0.5rem 0.5rem;
+  min-width: 30vw;
+  height: 465px;
+}
+
+/* consultamultiple.html */
+.consultamultiple {
+  display: flex;
+  justify-content: center;
+}
+
+.consultamultiple__content {
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  border-radius: 5px;
+  padding: 5px;
+  margin-top: 5vh;
+  box-shadow: var(--box-shadow);
+}
+
+#consultamultiple__img {
+  width: 100%;
+  height: auto;
+}
+
+.consultamultiple__form {
+  padding: 4px;
+}
+
+.consultamultiple__input {
+  background-color: var(--bg-color);
+  border: 0;
+  border-bottom: 1.5px solid var(--font-color);
+  outline: 0;
+  font-size: 16px;
+  color: var(--font-color);
+  padding: 4px;
+  margin: 4px 2px;
+}
+
+.consultamultiple__input:focus {
+  border-bottom: 1.5px solid rgb(255, 255, 255);
+}
+
+.consultamultiple__textarea {
+  background-color: var(--bg-color);
+  height: 150px;
+  width: 95%;
+  padding: 12px 20px;
+  margin: 12px 0;
+  box-sizing: border-box;
+  border: 0;
+  border-bottom: 2px solid var(--font-color);
+  border-top: 0;
+  resize: none;
+  outline: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 17px;
+  color: var(--font-color);
+}
+
+.consultamultiple__textarea:focus {
+  border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+.button__container {
+  align-self: center;
+}
+
+.consultamultiple__button {
+  background-color: var(--bt-color);
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  color: var(--font-color);
+  padding: 0.4em 0.8em;
+  margin: 0.5em;
+  border: 0px;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+
+/* faq.html */
+
+.faq__flexbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.faq {
+  background-color: #121212;
+  border-radius: 5px;
+  padding: 1em;
+  margin: 0.5em 2em;
+  box-shadow: var(--box-shadow);
+}
+
+.faq__pregunta {
+  color: var(--font-color);
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.faq__respuesta {
+  color: rgba(245, 245, 245, 0.60);
+  padding: 5px;
+  text-align: justify;
+}
+
+/* contacto.html */
+
+.contacto {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.contacto__preguntas {
+  background-color: var(--bg-color);
+  color: rgba(245, 245, 245, 0.87);
+  padding: 1em;
+  border-radius: 5px;
+  padding: 1em;
+  margin: 1em 0 1em 0;
+  box-shadow: var(--box-shadow);
+  width: 90vw;
+}
+
+.contacto__form {
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  border-radius: 5px;
+  padding: 1em;
+  margin: 2vh 0 2vh 0;
+  box-shadow: var(--box-shadow);
+  max-width: 900px;
+  width: 80vw;
+  align-self: center;
+}
+
+.contacto__titulo {
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.contacto__pregunta {
+  font-weight: 600;
+  margin-top: 0.2em;
+}
+
+.contacto__respuesta {
+  color: rgba(245, 245, 245, 0.60);
+  text-align: justify;
+  padding: 0.2em 1em;
+}
+
+.contacto__labelinput {
+  display: flex;
+  flex-direction: row;
+  margin: 0.4em;
+}
+
+.contacto__labelinput input {
+  background-color: var(--bg-color);
+  border: 0;
+  border-bottom: 1.5px solid var(--font-color);
+  outline: 0;
+  width: 40%;
+  font-size: 16px;
+  color: var(--font-color);
+  padding: 4px;
+  margin-left: 0.4em;
+}
+
+.contacto__labelinput input:focus {
+  border-bottom: 1.5px solid rgb(255, 255, 255);
+}
+
+.alojamientox__input {
+  background-color: var(--bg-color);
+  border: 0;
+  border-bottom: 1.5px solid var(--font-color);
+  outline: 0;
+  width: 40%;
+  font-size: 16px;
+  color: var(--font-color);
+  padding: 4px;
+  margin-left: 0.4em;
+}
+
+.alojamientox__input:focus {
+  border-bottom: 1.5px solid rgb(255, 255, 255);
+}
+
+.contacto__textarea label {
+  margin: 0.4em;
+}
+
+.contacto__textarea textarea {
+  background-color: var(--bg-color);
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  margin: 12px 0;
+  box-sizing: border-box;
+  border: 0;
+  border-bottom: 2px solid var(--font-color);
+  border-top: 0;
+  resize: none;
+  outline: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 17px;
+  color: var(--font-color);
+  margin: 0.4em;
+}
+
+.alojamientox__textarea {
+  background-color: var(--bg-color);
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  margin: 12px 0;
+  box-sizing: border-box;
+  border: 0;
+  border-bottom: 2px solid var(--font-color);
+  border-top: 0;
+  resize: none;
+  outline: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 17px;
+  color: var(--font-color);
+}
+
+.contacto__form textarea:focus {
+  border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+.stylish__button {
+  background-color: var(--bt-color);
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  color: var(--font-color);
+  padding: 0.4em 0.8em;
+  margin: 0.5em;
+  border: 0px;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+
+.stylish__button:hover {
+  background-color: rgba(55, 139, 252, 0.3);
+  color: rgba(245, 245, 245, 1);
+  transition-duration: 200ms;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu>li {
+  margin: 0 0.5rem;
+  overflow: hidden;
+}
+
+.menu-button-container {
+  display: none;
+  height: 100%;
+  width: 30px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 2vw;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
+
+.menu-button::before {
+  content: '';
+  margin-top: -8px;
+}
+
+.menu-button::after {
+  content: '';
+  margin-top: 8px;
+}
+
+#menu-toggle:checked+.menu-button-container .menu-button::before {
+  margin-top: 0px;
+  transform: rotate(405deg);
+}
+
+#menu-toggle:checked+.menu-button-container .menu-button {
+  background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked+.menu-button-container .menu-button::after {
+  margin-top: 0px;
+  transform: rotate(-405deg);
+}
+
+@media screen and (max-width: 1830px) {
+
+  /* alojamientox */
+  .alojamientox__main {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  .alojamientox__container {
+    align-self: center;
+    margin-bottom: 2rem;
+  }
+
+  .alojamientox__img {
+    width: calc(100vw - 10vw);
+  }
+
+  .alojamientox__aside {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2vw;
+  }
+
+  .alojamientox__info {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap
+  }
+
+  .alojamientox__contacto {
+    align-self: center;
+    margin-left: 1.5rem;
+  }
+
+  .alojamientox__contacto ul {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 1829px) {
+  .servicios__contacto {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .alojamientox__contacto ul {
+    flex-direction: row;
+    align-self: flex-start;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .grid__card {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid__alojamientos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* tablet */
+@media screen and (max-width:1260px) {
+
+  /* index.html */
+  .grid__card {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid__alojamientos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .alojamientox__aside {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .alojamientox__descripcion {
+    width: 85vw;
+  }
+
+  .alojamientox__servicios {
+    width: 80vw;
+  }
+
+  .alojamientox__form {
+    width: 80vw;
+  }
+
+  .alojamientox__maps {
+    width: fi;
+  }
+}
+
+/* mobile */
+@media screen and (max-width:880px) {
+  .grid__card {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .grid__alojamientos {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .footer__frase {
+    display: flex;
+    font-family: 'Square Peg', cursive;
+    color: white;
+    font-size: 32px;
+    margin-left: 4px;
+  }
+
+  .menu-button-container {
+    display: flex;
+  }
+
+  .menu {
+    position: absolute;
+    top: 0;
+    margin-top: 50px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #menu-toggle~.menu li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  #menu-toggle:checked~.menu li {
+    border: 1px solid #333;
+    height: 2.5em;
+    padding: 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .menu>li {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0.5em 0;
+    width: 100%;
+    color: var(--font-color);
+    background-color: var(--bg-color);
+  }
+
+  .menu>li:not(:last-child) {
+    border-bottom: 1px solid #444;
+  }
+
+  .iframe__container {
+    display: flex;
+    align-content: center;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .iframe__container iframe {
+    height: 100%;
+    width: 100%;
+  }
+
+  .iframe__container iframe {
+    padding: 0.5rem 0.5rem;
+    min-width: 75vw;
+    height: 360px;
+  }
+}
+
+@media screen and (max-width:660px) {
+
+  .nav__lista {
+    flex-direction: column;
+  }
+
+  .footer {
+    height: fit-content;
+    flex-direction: column-reverse;
+  }
+
+  .footer__p {
+    font-size: 16px;
+    margin: 4px 0 4px 0;
+  }
+
+  .alojamientox__labelinput {
+    flex-direction: column;
+  }
+
+  .contacto__labelinput {
+    flex-direction: column;
+  }
+
+  .contacto__labelinput input {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width:420px) {
+
+  /* index.html */
+  .card__destacada {
+    width: 90%;
+    height: fit-content;
+  }
+
+  .card__ul__text {
+    text-align: left;
+  }
+
+  .card__ul__text-destacada {
+    text-align: left;
+  }
+
+  .footer__p {
+    font-size: 13px;
+    text-align: center;
+    margin: 0;
+  }
+
+  /* alojamientos.html */
+  .card {
+    width: 90%;
+    height: fit-content;
+  }
+}
